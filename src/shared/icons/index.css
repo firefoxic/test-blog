@@ -1,0 +1,7 @@
+:root {
+	--icon--shape_burger: url("./burger.svg");
+	--icon--shape_cross: url("./cross.svg");
+	/* --icon--shape_telegram: url("./telegram.svg"); */
+	/* --icon--shape_github: url("./github.svg"); */
+	/* --icon--shape_linkedin: url("./linkedin.svg"); */
+}

@@ -1,7 +1,7 @@
 ---
-import Navigation from "../components/Navigation.astro"
+import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
-import "../styles/global.css"
+import "../styles/index.css"
 
 const pageTitle = `About Me`
 const identity = {
@@ -26,10 +26,9 @@ const goal = 3
 		<meta name="generator" content={Astro.generator}>
 		<title>{pageTitle}</title>
 	</head>
-	<bo>
-		<header>
-			<Navigation />
-		</header>
+	<body>
+		<Header />
+
 		<hgroup>
 			<h1>{pageTitle}</h1>
 			<p>... and my new Astro site!</p>
@@ -64,6 +63,11 @@ const goal = 3
 			:
 			<p>My goal is not 3 days.</p>
 		}
+
 		<Footer />
+
+		<script>
+			import "../scripts/index.js"
+		</script>
 	</body>
 </html>

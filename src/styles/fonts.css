@@ -1,0 +1,6 @@
+:root {
+	--font-family-main: serif;
+	--font-family-accent: system-ui, sans-serif;
+
+	font-family: var(--font-family-main);
+}

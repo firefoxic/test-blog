@@ -1,8 +1,96 @@
 ---
+const navLinks = [
+	{
+		title: `Main page`,
+		pathname: `/`,
+	},
+	{
+		title: `About me`,
+		pathname: `/about`,
+	},
+	{
+		title: `Blog`,
+		pathname: `/blog`,
+	}
+]
 ---
 
-<nav>
-	<a href="/">Main page</a>
-	<a href="/about">About</a>
-	<a href="/blog">Blog</a>
+<nav class="Navigation" aria-label="Main navigation">
+	<button class="Navigation-Button" type="button" aria-controls="Navigation-List" hidden>
+		<span class="visually-hidden">Toggle navigation list</span>
+	</button>
+
+	<ul class="Navigation-List" id="Navigation-List">
+		{navLinks.map((link) => (
+			<li class="Navigation-Item">
+				<a class="Navigation-Link" href={link.pathname} aria-current={Astro.url.pathname === link.pathname ? "page" : undefined} >{link.title}</a>
+			</li>
+		))}
+	</ul>
 </nav>
+
+<style>
+.Navigation {
+	position: relative;
+	z-index: 1;
+
+	&:has([aria-expanded="false"]) {
+		--icon: var(--icon--shape_burger);
+	}
+
+	&:has([aria-expanded="true"]) {
+		--icon: var(--icon--shape_cross);
+		--list-visibility: visible;
+	}
+}
+
+.Navigation-Button {
+	@media (scripting: enabled) {
+		@media (width < 636px) {
+			display: grid;
+		}
+	}
+
+	&::before {
+		content: "";
+		inline-size: 24px;
+		aspect-ratio: 1;
+		background: currentcolor;
+		mask: var(--icon) no-repeat center / cover;
+	}
+}
+
+.Navigation-List {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+
+	@media (width < 636px) {
+		flex-direction: column;
+		background: #ffffff;
+
+		@media (scripting: enabled) {
+			position: absolute;
+			inset-inline: 0;
+			padding-block: 1em;
+			box-shadow:
+				50vw 0 0 0 #ffffff,
+				-50vw 0 0 0 #ffffff;
+			visibility: var(--list-visibility, collapse);
+		}
+	}
+}
+
+.Navigation-Item {
+	&::marker {
+		color: transparent;
+	}
+}
+
+.Navigation-Link {
+	font-family: var(--font-family-accent);
+	text-underline-offset: 0.3em;
+}
+</style>

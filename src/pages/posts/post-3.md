@@ -1,7 +1,9 @@
 ---
-title: My Third Blog Post
-author: Astro Learner
+layout: ../../layouts/MarkdownPostLayout.astro
+lang: en
+title: My third blog post
 description: "I had some challenges, but asking in the community really helped!"
+author: Astro Learner
 image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."

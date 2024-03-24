@@ -1,0 +1,43 @@
+:root {
+	scroll-behavior: smooth;
+	text-size-adjust: 100%;
+
+	@media (prefers-reduced-motion: reduce) {
+		--motion-duration: 0ms;
+		scroll-behavior: auto;
+	}
+
+	&:has(dialog[open]) {
+		overflow: hidden;
+	}
+}
+
+:focus-visible {
+	outline-offset: 2px;
+}
+
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+	object-fit: contain;
+}
+
+:is(picture, source) {
+	display: contents;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+
+/* Temporary styles */
+body {
+	margin: 0 auto;
+	max-width: 60ch;
+	padding: 1rem;
+}

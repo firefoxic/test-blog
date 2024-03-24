@@ -1,0 +1,34 @@
+---
+---
+<details class="SchemeSwitch">
+	<summary class="SchemeSwitch-Button">
+		<span class="visually-hidden">Color scheme indicator</span>
+	</summary>
+	<div class="SchemeSwitch-Text">
+		Yeah, it's just an indicator. There will never be a color scheme switch on this site. Because "<a href="javascript:void(0)">You don't need a color scheme switch</a>" — just use your system switch.
+	</div>
+</details>
+
+<style>
+	.SchemeSwitch-Button {
+		display: grid;
+		inline-size: 2rem;
+		aspect-ratio: 1;
+		padding: 0.2em;
+		box-sizing: border-box;
+
+		@media (prefers-color-scheme: dark) {
+			--Icon: var(--Icon_shape_moon);
+		}
+
+		@media (prefers-color-scheme: light) {
+			--Icon: var(--Icon_shape_sun);
+		}
+
+		&::before {
+			content: "";
+			mask: var(--Icon) no-repeat center / contain;
+			background: currentcolor;
+		}
+	}
+</style>

@@ -27,7 +27,7 @@ const navLinks = [
 	<ul class="Navigation-List" id="Navigation-List">
 		{navLinks.map((link) => (
 			<li class="Navigation-Item">
-				<a class="Navigation-Link" href={link.pathname} aria-current={Astro.url.pathname === link.pathname ? "page" : undefined} >{link.title}</a>
+				<a class="Navigation-Link" href={import.meta.env.BASE_URL + link.pathname} aria-current={Astro.url.pathname === link.pathname ? "page" : undefined} >{link.title}</a>
 			</li>
 		))}
 	</ul>
@@ -39,11 +39,11 @@ const navLinks = [
 	z-index: 1;
 
 	&:has([aria-expanded="false"]) {
-		--icon: var(--icon--shape_burger);
+		--Icon: var(--Icon_shape_burger);
 	}
 
 	&:has([aria-expanded="true"]) {
-		--icon: var(--icon--shape_cross);
+		--Icon: var(--Icon_shape_cross);
 		--list-visibility: visible;
 	}
 }
@@ -60,7 +60,7 @@ const navLinks = [
 		inline-size: 24px;
 		aspect-ratio: 1;
 		background: currentcolor;
-		mask: var(--icon) no-repeat center / cover;
+		mask: var(--Icon) no-repeat center / cover;
 	}
 }
 
@@ -73,15 +73,15 @@ const navLinks = [
 
 	@media (width < 636px) {
 		flex-direction: column;
-		background: #ffffff;
+		background: var(--color-bg);
 
 		@media (scripting: enabled) {
 			position: absolute;
 			inset-inline: 0;
 			padding-block: 1em;
 			box-shadow:
-				50vw 0 0 0 #ffffff,
-				-50vw 0 0 0 #ffffff;
+				50vw 0 0 0 var(--color-bg),
+				-50vw 0 0 0 var(--color-bg);
 			visibility: var(--list-visibility, collapse);
 		}
 	}
@@ -94,7 +94,7 @@ const navLinks = [
 }
 
 .Navigation-Link {
-	font-family: var(--font-family-accent);
+	font-family: var(--Font_family_accent);
 	text-underline-offset: 0.3em;
 }
 </style>

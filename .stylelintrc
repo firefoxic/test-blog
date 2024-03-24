@@ -1,0 +1,21 @@
+{
+	"extends": "stylelint-config-firefoxic",
+	"rules": {
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				"typesSyntax": {
+					"color": "| oklch( [ <percentage> | <number> | none] [ <percentage> | <number> | none] [ <hue> | none] [ / [<alpha-value> | none] ]? )"
+				}
+			}
+		],
+		"length-zero-no-unit": null,
+		"@stylistic/named-grid-areas-alignment": [
+			true,
+			{
+				"gap": 2,
+				"alignQuotes": true
+			}
+		]
+	}
+}

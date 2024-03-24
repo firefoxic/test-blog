@@ -1,7 +1,10 @@
 :root {
-	--icon--shape_burger: url("./burger.svg");
-	--icon--shape_cross: url("./cross.svg");
-	/* --icon--shape_telegram: url("./telegram.svg"); */
-	/* --icon--shape_github: url("./github.svg"); */
-	/* --icon--shape_linkedin: url("./linkedin.svg"); */
+	--Icon_shape_burger: url("./burger.svg");
+	--Icon_shape_cross: url("./cross.svg");
+	--Icon_shape_moon: url("./moon.svg");
+	--Icon_shape_sun: url("./sun.svg");
+
+	--Icon_shape_github: url("./github.svg");
+	--Icon_shape_mastodon: url("./mastodon.svg");
+	--Icon_shape_telegram: url("./telegram.svg");
 }

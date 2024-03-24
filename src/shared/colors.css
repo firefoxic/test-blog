@@ -1,0 +1,22 @@
+:root {
+	/* Color palette */
+	--color-white: oklch(100% 0 0);
+	--color-black: oklch(0% 0 0);
+	--color-yellow: oklch(86% 0.17 90);
+	--color-green: oklch(86% 0.17 130);
+	--color-cyan: oklch(86% 0.17 170);
+	--color-gray-light: color-mix(in oklab, var(--color-white) 90%, var(--color-black));
+	--color-gray-dark: color-mix(in oklab, var(--color-white) 30%, var(--color-black));
+
+	/* UI colors */
+	--color-bg: light-dark(var(--color-gray-light), var(--color-gray-dark));
+	--color-text: light-dark(var(--color-gray-dark), var(--color-gray-light));
+	--color-accent: light-dark(var(--color-cyan), var(--color-yellow));
+	--color-brand: var(--color-green);
+
+	/* background-color: var(--color-bg); */
+	color: var(--color-text);
+	accent-color: var(--color-accent);
+	color-scheme: light dark;
+	background-color: var(--color-bg);
+}

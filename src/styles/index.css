@@ -1,3 +1,6 @@
-@import url("./fonts.css");
-@import url("./global.css");
-@import url("../shared/icons/index.css");
+@import "../shared/fonts/index.css";
+@import "../shared/icons/index.css";
+@import "../shared/colors.css";
+@import "../shared/global.css";
+@import "../shared/visually-hidden.css";
+/* @import "../shared/outline.css" layer(outline); */

@@ -6,9 +6,9 @@ pubDate: 2022-07-01
 description: This is my first post of the new Astro blog.
 author: Astro Learner
 image:
-    url: https://docs.astro.build/assets/full-logo-light.png
-    alt: Full Astro logo.
-tags: ["astro", "blogging", "learning in public"]
+  url: https://docs.astro.build/assets/full-logo-light.png
+  alt: Full Astro logo.
+tags: ["astro", "blogging", "learning"]
 ---
 
 Welcome to my _new blog_ about learning Astro! This is where I'll be talking about my learning journey as I build a new website.

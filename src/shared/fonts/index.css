@@ -1,0 +1,29 @@
+/*
+ * The size-adjust values are obtained in this tool:
+ * https://www.industrialempathy.com/perfect-ish-font-fallback/
+ */
+
+/* Make a custom fallback font based on the local Times New Roman */
+@font-face {
+	font-family: vollkorn fallback;
+	size-adjust: 108.3%;
+	src: local("Times New Roman");
+}
+
+/* Make a custom fallback font based on the local Arial */
+@font-face {
+	font-family: raleway fallback;
+	size-adjust: 104.1%;
+	src: local("Arial");
+}
+
+/* Specify the fallback font next after the custom font. */
+:root {
+	--Font_family_main: vollkorn variable, vollkorn fallback, serif;
+	--Font_family_accent: raleway variable, raleway fallback, sans-serif;
+	/* IMPORTANT: The line-height for all text with custom fonts must be specified to avoid CLS */
+
+	font-family: var(--Font_family_main);
+	font-size: 125%;
+	line-height: 1.5;
+}

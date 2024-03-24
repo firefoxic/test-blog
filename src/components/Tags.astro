@@ -1,0 +1,37 @@
+---
+const { tags } = Astro.props;
+---
+
+<ul class="Tags">
+	{tags.map((tag) => <li class="Tags-Item">
+		<a class="Tags-Link" href={`/tags/${tag}`}>{tag}</a>
+	</li>)}
+</ul>
+
+<style>
+.Tags {
+	display: flex;
+	flex-wrap: wrap;
+	padding: unset;
+}
+
+.Tags-Item {
+	margin: 0.25em;
+	border: dotted 1px #a1a1a1;
+	border-radius: 0.5em;
+	font-size: 1.15em;
+	background-color: #F8FCFD;
+
+	&::marker {
+		color: transparent;
+	}
+}
+
+.Tags-Link {
+	display: inline-block;
+	padding: 0.5em 1em;
+	font-family: var(--Font_family_accent);
+	color: #00539F;
+	text-decoration: none;
+}
+</style>

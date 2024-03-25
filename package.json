@@ -3,7 +3,7 @@
 	"type": "module",
 	"private": true,
 	"engines": {
-		"node": "^18.12 || >=20.9",
+		"node": "^20.9",
 		"pnpm": "^8.15"
 	},
 	"browserslist": [

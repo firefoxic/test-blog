@@ -4,7 +4,7 @@
 	"private": true,
 	"engines": {
 		"node": "^20.9",
-		"pnpm": "^8.15"
+		"pnpm": "^8.14"
 	},
 	"browserslist": [
 		"last 2 chrome versions",

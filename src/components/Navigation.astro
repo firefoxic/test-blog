@@ -1,4 +1,6 @@
 ---
+import { normalizePath } from "../../utils/normalizePath.js"
+
 const navLinks = [
 	{
 		title: `Main page`,
@@ -27,7 +29,7 @@ const navLinks = [
 	<ul class="Navigation-List" id="Navigation-List">
 		{navLinks.map((link) => (
 			<li class="Navigation-Item">
-				<a class="Navigation-Link" href={import.meta.env.BASE_URL + link.pathname} aria-current={Astro.url.pathname === link.pathname ? "page" : undefined} >{link.title}</a>
+				<a class="Navigation-Link" href={normalizePath(link.pathname)} aria-current={Astro.url.pathname === link.pathname ? "page" : undefined} >{link.title}</a>
 			</li>
 		))}
 	</ul>

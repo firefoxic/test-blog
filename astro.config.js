@@ -2,7 +2,7 @@ import lit from "@astrojs/lit"
 import { defineConfig } from "astro/config"
 import browserslistToEsbuild from "browserslist-to-esbuild"
 
-import { getProjectRoot } from "./.github/utils/getProjectRoot.js"
+import { getProjectRoot } from "./utils/getProjectRoot.js"
 
 // https://astro.build/config
 export default defineConfig({

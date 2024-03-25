@@ -1,10 +1,12 @@
 ---
+import { normalizePath } from "../../utils/normalizePath.js"
+
 const { tags } = Astro.props;
 ---
 
 <ul class="Tags">
 	{tags.map((tag) => <li class="Tags-Item">
-		<a class="Tags-Link" href={`/tags/${tag}`}>{tag}</a>
+		<a class="Tags-Link" href={normalizePath(`/tags/${tag}`)}>{tag}</a>
 	</li>)}
 </ul>
 

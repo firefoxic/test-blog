@@ -38,6 +38,9 @@ p {
 /* Temporary styles */
 body {
 	margin: 0 auto;
-	max-width: 60ch;
-	padding: 1rem;
+	padding-inline: 1rem;
+	max-inline-size: 60ch;
+	min-block-size: 100svh;
+	display: grid;
+	grid-template-rows: auto 1fr;
 }

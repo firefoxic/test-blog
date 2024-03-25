@@ -7,10 +7,13 @@ import { getProjectRoot } from "./utils/getProjectRoot.js"
 // https://astro.build/config
 export default defineConfig({
 	base: getProjectRoot(),
-	scopedStyleStrategy: `class`,
-	site: `https://firefoxic-test-blog.netlify.app`,
 	build: {
 		assets: `assets`,
+	},
+	scopedStyleStrategy: `class`,
+	site: `https://firefoxic-test-blog.netlify.app`,
+	server: {
+		host: true,
 	},
 	vite: {
 		build: {
